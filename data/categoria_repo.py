@@ -23,7 +23,7 @@ def obter_todos() -> list[Categoria]:
     cursor.execute(OBTER_TODOS)
     tuplas = cursor.fetchall()
     categorias = [
-        categorias(
+        Categoria(
             id=tupla[0], 
             nome=tupla[1]) 
             for tupla in tuplas]
